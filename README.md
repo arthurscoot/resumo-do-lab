@@ -1,7 +1,7 @@
 # resumo-do-lab
-Este repositório contém o resumo das lições aprendidas durante o desenvolvimento do lab na DIO
+Este repositório contém o resumo das lições aprendidas durante o desenvolvimento dos labs na DIO
 
-# Microsoft Azure - Conceitos Iniciais
+# Microsoft Azure - Conceitos Iniciais / Localizando Serviços por Categoria
 
 Durante o primeiro módulo do laboratório da DIO sobre **Microsoft Azure**, aprendi os conceitos iniciais da **computação em nuvem**, suas utilidades, seu funcionamento e as necessidades que acompanham o uso dessa tecnologia.
 
@@ -28,6 +28,6 @@ Outro ponto abordado foi o **modelo de precificação baseado em consumo**, que 
 - ✅ **Otimização de custos**, desativando serviços e máquinas virtuais quando não forem mais necessários.
 - ✅ **Flexibilidade**, permitindo ajustes rápidos na infraestrutura conforme a demanda da empresa.
 
-## Objetivos Futuros
+## Localizando Serviços por Categoria
 
-Pretendo aprofundar meus conhecimentos na área, explorando mais sobre os recursos e benefícios da computação em nuvem, especialmente no **Microsoft Azure**.
+O Microsoft Azure oferece uma ampla gama de serviços em nuvem, abrangendo diversas categorias, como computação, contêineres, bancos de dados, DevOps, redes, Bastions e muitas outras. Esses serviços possibilitam soluções escaláveis, seguras e eficientes para atender às mais variadas necessidades de desenvolvimento e infraestrutura.
