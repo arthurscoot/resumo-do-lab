@@ -65,7 +65,7 @@ A capacidade de gerenciar recursos de diferentes maneiras é um dos pontos forte
 - **Evitar erros humanos** ao automatizar processos.
 - **Acelerar o tempo de desenvolvimento** com modelos pré-configurados, eliminando a necessidade de configurações manuais.
 
-# Criando Máquinas Virtuais na Azure
+## Criando Máquinas Virtuais na Azure
 
 Ao criar uma máquina virtual na Azure, existem várias opções disponíveis, como **disponibilidade**, **tipos de segurança**, entre outras configurações essenciais. A plataforma permite a criação de **contas de armazenamento**, incluindo **LRS (Locally Redundant Storage)**, **GRS (Geo-Redundant Storage)**, **ZRS (Zone-Redundant Storage)** e **GZRS (Geo-Zone-Redundant Storage)**.
 
