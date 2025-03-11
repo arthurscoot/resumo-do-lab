@@ -70,3 +70,73 @@ A capacidade de gerenciar recursos de diferentes maneiras é um dos pontos forte
 Ao criar uma máquina virtual na Azure, existem várias opções disponíveis, como **disponibilidade**, **tipos de segurança**, entre outras configurações essenciais. A plataforma permite a criação de **contas de armazenamento**, incluindo **LRS (Locally Redundant Storage)**, **GRS (Geo-Redundant Storage)**, **ZRS (Zone-Redundant Storage)** e **GZRS (Geo-Zone-Redundant Storage)**.
 
 Além disso, a Azure oferece uma vasta documentação para auxiliar na configuração e gerenciamento de máquinas virtuais dentro da plataforma. Compreender as melhores estratégias é essencial para **atingir as expectativas da empresa sem custos desnecessários**.
+
+# 3º módulo - Tipos de serviço em nuvem -  Configurando uma instância de banco de dados na Azure
+
+## **IaaS - Infraestrutura como Serviço**
+
+O cliente tem mais acesso e controle sobre os recursos. Os serviços oferecidos podem ser alterados, manuseados e configurados conforme a necessidade do usuário.
+
+### **Principais recursos:**
+- Servidores e armazenamento
+- Firewalls e segurança de rede
+- Data centers físicos
+
+A IaaS é a opção mais flexível, permitindo que o usuário gerencie o hardware e a infraestrutura de TI.
+
+---
+
+## **PaaS - Plataforma como Serviço**
+
+Engloba a IaaS e fornece uma plataforma completa para desenvolvimento na nuvem. O usuário pode focar na criação e gerenciamento de aplicações sem precisar lidar com a infraestrutura subjacente.
+
+### **Principais recursos:**
+- Sistemas operacionais
+- Ferramentas de desenvolvimento
+- Gerenciadores de banco de dados
+
+Ideal para desenvolvedores que desejam criar, testar e implementar aplicativos sem se preocupar com a administração do ambiente.
+
+---
+
+## **SaaS - Software como Serviço**
+
+Engloba tanto a IaaS quanto a PaaS, porém, o cliente não possui acesso direto à infraestrutura subjacente. O provedor gerencia toda a infraestrutura e disponibiliza o software como um serviço.
+
+### **Principais recursos:**
+- Aplicações hospedadas na nuvem
+- Modelo de pagamento conforme o uso
+- Exemplo: Microsoft 365
+
+Os usuários podem acessar os aplicativos diretamente pela internet, sem necessidade de instalação ou manutenção.
+
+---
+
+## **Modelo de Responsabilidade Compartilhada**
+
+A responsabilidade do usuário varia de acordo com o modelo de serviço utilizado. Quanto mais simplificado o serviço, menor a responsabilidade do cliente:
+
+- **IaaS**: O cliente tem maior controle e gerencia o hardware virtual.
+- **PaaS**: O provedor gerencia a plataforma e o usuário foca no desenvolvimento de aplicativos.
+- **SaaS**: O provedor cuida de tudo, e o usuário apenas utiliza o software.
+
+A única responsabilidade sempre mantida pelo provedor é a infraestrutura física da nuvem, como a rede, os data centers e os servidores físicos.
+
+---
+
+## Configurando uma Instância de Banco de Dados na Azure
+
+Para criar um banco de dados na Azure, alguns passos são essenciais:
+
+1. **Criar uma Máquina Virtual**
+   - Selecionar uma imagem pré-configurada.
+   - Definir o tamanho da imagem para estimar custos.
+
+2. **Configurar o Banco de Dados**
+   - Definir um nome para o banco de dados.
+   - Escolher um servidor antes da criação.
+   - Configurar o tipo de autenticação de acesso.
+
+3. **Gerenciamento de Custos**
+   - O banco em nuvem exibe o custo mensal esperado baseado nas configurações escolhidas.
+
