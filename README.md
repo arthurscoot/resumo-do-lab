@@ -140,7 +140,7 @@ Para criar um banco de dados na Azure, alguns passos são essenciais:
 3. **Gerenciamento de Custos**
    - O banco em nuvem exibe o custo mensal esperado baseado nas configurações escolhidas.
   
-# 4º módulo - Componentes de Arquitetura do Azure / Construindo Arquiteturas na Azure
+# 4º módulo - Componentes de Arquitetura do Azure - Construindo Arquiteturas na Azure
 
 O Microsoft Azure é um serviço de computação em nuvem que oferece diversas regiões e recursos para a criação de soluções escaláveis e seguras. Abaixo estão os principais conceitos e componentes da arquitetura do Azure.
 
