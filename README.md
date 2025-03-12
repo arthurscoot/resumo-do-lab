@@ -237,3 +237,113 @@ Quando uma conta é criada no Azure, ela recebe uma **assinatura associada**. É
 É possível criar uma **rede virtual (VNet)** e direcionar um IP para um grupo de recursos específico.
 Isso facilita a comunicação entre diferentes serviços dentro do Azure.
 
+# 4º módulo - Computação e Rede na Azure - Configurando Recursos e Dimensionamentos em Máquinas Virtuais na Azure
+
+## Introdução
+A computação do Azure é um serviço sob demanda que fornece diversos recursos, incluindo máquinas virtuais, aplicativos como serviço, contêineres, instâncias de contêineres, Kubernetes e a Área de Trabalho Virtual do Azure.
+
+---
+
+## Tipos de Computação no Azure
+
+### Máquinas Virtuais (VMs)
+As máquinas virtuais são um dos principais recursos do Azure. Elas são emulações de hardware físico e incluem componentes como processador, memória, armazenamento e redes. 
+
+- **Oferta de IaaS**: Fornece personalização e controle total sobre os recursos.
+- **Conjuntos de Dimensionamento de VMs**: Permitem balanceamento de carga e escalonamento automático de recursos.
+
+### Conjunto de Disponibilidade de VMs
+Para garantir alta disponibilidade e resiliência:
+- Se um rack falhar, outras instâncias podem assumir.
+- As máquinas são distribuídas entre **Domínios de Falha** (isolando falhas físicas) e **Domínios de Atualização** (evitando indisponibilidade durante atualizações).
+- Recomenda-se pelo menos **três domínios de falha** para garantir maior confiabilidade.
+
+### Área de Trabalho Virtual do Azure
+- Serviço de virtualização de desktops e aplicativos baseado na nuvem.
+- Suporte para várias sessões simultâneas.
+- Redução de riscos com segurança aprimorada e MFA (Autenticação Multifator).
+- Permite configurar regras de acesso e personalizar o ambiente.
+
+---
+
+## Serviços de Contêineres do Azure
+Os contêineres são ambientes leves e isolados que não exigem gerenciamento de sistema operacional completo.
+
+### Principais serviços de contêineres no Azure:
+- **Instâncias de Contêineres do Azure (ACI)**: Oferta de PaaS para executar contêineres sem necessidade de gerenciar infraestrutura.
+- **Aplicativos de Contêineres do Azure**: Também PaaS, permite balanceamento de carga e escalonamento.
+- **Serviço de Kubernetes do Azure (AKS)**: Orquestração de contêineres para arquiteturas distribuídas e gerenciamento do ciclo de vida.
+
+O **Docker** é um dos formatos mais populares de contêineres e é compatível com o Azure.
+
+---
+
+## Azure Functions
+- Serviço **serverless** baseado em eventos.
+- Executa código sob demanda sem necessidade de infraestrutura permanente.
+- Ideal para automação e processamento de eventos.
+
+---
+
+## Comparação das Opções de Computação no Azure
+
+| Opção | Características |
+|---|---|
+| **Máquinas Virtuais** | Servidor baseado em nuvem para Windows e Linux, ideal para migração *Lift-and-Shift* |
+| **Área de Trabalho Virtual** | Ambientes de desktop na nuvem acessíveis via navegador ou aplicativo |
+| **Contêineres** | Execução leve e escalável de microsserviços, suportando orquestração com AKS |
+
+---
+
+## Serviços de Aplicativos do Azure
+- Plataforma gerenciada para criar, implantar e escalar **aplicações web e APIs**.
+- Suporte a diversas tecnologias como **.NET, Node.js, Java, Python e PHP**.
+- Integração com GitHub para automação de deploys.
+- Oferta de **PaaS** com segurança e conformidade corporativa.
+
+---
+
+## Serviços de Rede do Azure
+
+### Rede Virtual (VNet)
+- Permite comunicação entre recursos do Azure e redes externas.
+- Pontos de extremidade **públicos** (acessíveis via Internet) e **privados** (internos à rede).
+- Uso de **sub-redes** para segmentação e segurança.
+- **Emparelhamento de Rede** conecta redes privadas diretamente.
+- **Evitar overlap de IP** ao configurar redes para evitar conflitos de endereçamento.
+
+### Gateway de VPN
+- Envia tráfego criptografado entre uma rede local e uma rede virtual no Azure.
+- **ExpressRoute**: Alternativa mais segura e confiável para conexões dedicadas ao Azure.
+
+### DNS do Azure
+- Rede global de servidores DNS com alta confiabilidade e desempenho.
+- Controle de acesso baseado em função.
+- **Registros de Alias** permitem apontamento direto para recursos do Azure.
+
+---
+
+## Configurando Recursos e Dimensionamentos em Máquinas Virtuais na Azure
+
+### Criando uma Máquina Virtual
+1. Criar um **Grupo de Recursos** e uma **Rede Virtual**.
+2. Selecionar **Assinatura** e o **Grupo de Recursos**.
+3. Configurar **Nome da Máquina**, **Região**, **Opções de Disponibilidade**.
+
+### Opções de Disponibilidade
+- **Zonas de Disponibilidade**: Distribui máquinas em diferentes locais para alta resiliência.
+- **Conjuntos de Dimensionamento de VMs**: Permite escalonamento automático baseado em demanda.
+
+### Dimensionamento de Máquinas Virtuais
+- Definir **mínimo e máximo** de instâncias.
+- Configurar **escalonamento automático** baseado no uso da CPU.
+- Ajustar **escala horizontal** (adicionar ou remover VMs).
+- **Spot VM**: Oferece preços reduzidos, mas pode ser encerrada pelo Azure em momentos de alta demanda.
+
+---
+
+# Criando Aplicativos de Função no Azure
+1. Adicionar um **Nome** e selecionar **Código** ou **Imagem de Contêiner**.
+2. Escolher a **Pilha de Runtime** e sua versão.
+3. Definir a **Região**.
+4. A pilha de runtime influencia o sistema operacional base.
