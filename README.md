@@ -139,4 +139,101 @@ Para criar um banco de dados na Azure, alguns passos são essenciais:
 
 3. **Gerenciamento de Custos**
    - O banco em nuvem exibe o custo mensal esperado baseado nas configurações escolhidas.
+  
+# 4º módulo - Componentes de Arquitetura do Azure / Construindo Arquiteturas na Azure
+
+O Microsoft Azure é um serviço de computação em nuvem que oferece diversas regiões e recursos para a criação de soluções escaláveis e seguras. Abaixo estão os principais conceitos e componentes da arquitetura do Azure.
+
+## Regiões do Azure
+
+O Azure possui mais de **60 regiões** distribuídas por **140 países**, incluindo:
+- Canadá
+- Estados Unidos
+- Brasil
+- Países da Europa
+- Austrália
+- Sul da Ásia
+- China
+- Japão
+
+### Importância da Escolha da Região
+O ideal é contratar um servidor mais próximo de você para reduzir a latência e melhorar o desempenho da rede.
+
+### Estrutura das Regiões
+Cada região é composta por **um ou mais datacenters**. Quanto mais datacenters em uma área, maior a estabilidade e a disponibilidade dos serviços. Isso garante a continuidade dos servidores em caso de falha.
+
+- Diversos servidores reduzem a latência, permitindo o armazenamento e recuperação de dados de forma distribuída.
+- As regiões preservam a **residência dos dados**, garantindo conformidade com legislações como a **LGPD (Lei Geral de Proteção de Dados)**.
+
+### Zonas de Disponibilidade
+Cada região contém **zonas de disponibilidade**, compostas por datacenters independentes.
+- Cada datacenter possui **alimentação, resfriamento e rede próprios**.
+- Conectados por uma **rede privada de fibra óptica**, garantindo alta performance e redundância.
+
+## Pares de Regiões e Grupos de Recursos
+
+Para garantir **recuperação de desastres**, cada região tem um **par de região** onde os dados podem ser replicados automaticamente.
+
+- A separação entre pares de regiões é de **pelo menos 300 milhas (aproximadamente 480 km)**.
+- Replicação automática em alguns serviços.
+- Em caso de falha, a recuperação da região emparelhada tem **prioridade**.
+
+### Regiões Soberanas
+Existem **regiões soberanas** que não estão disponíveis para qualquer pessoa ou empresa. Essas instâncias são **fisicamente isoladas** e seguem regras específicas:
+
+#### Azure Governo dos EUA
+- Atende a **agências federais**, governos estaduais e locais dos EUA.
+- Apenas **pessoas verificadas e autorizadas** têm acesso.
+- Isolado de implementações comuns do Azure.
+
+#### Azure China
+- Operado por um grupo local chamado **21Vianet**.
+- Todos os dados permanecem **dentro da China**.
+
+## Recursos do Azure
+
+Os recursos do Azure são componentes essenciais para a construção de soluções em nuvem, como:
+- **Máquinas Virtuais (VMs)**
+- **Bancos de Dados SQL**
+- **Serviços de Aplicativos**
+- **Redes Virtuais (VNet)**
+- **Contas de Armazenamento**
+
+### Grupos de Recursos
+Os grupos de recursos organizam os componentes do Azure de forma eficiente:
+- Permitem agrupar **máquinas virtuais, bancos de dados, redes e armazenamento**.
+- Podem ser organizados por **projetos, ambientes de testes, entre outros**.
+- Os grupos de recursos **não são limitados por região**.
+- Recursos podem ser **movidos entre grupos** sem restrições diretas.
+
+## Assinaturas do Azure
+
+Quando uma conta é criada no Azure, ela recebe uma **assinatura associada**. É possível ter **várias assinaturas** dentro da mesma conta.
+
+- Exemplo: Assinaturas separadas para **desenvolvimento, teste e produção**.
+- Cada assinatura possui **cobrança individual**.
+- A cobrança gera **relatórios e faturas separadas** para cada assinatura.
+
+### Hierarquia de Organização e Segurança no Azure
+1. **Grupos de gerenciamento**
+2. **Assinaturas**
+3. **Grupos de recursos**
+4. **Recursos individuais**
+
+## Construção de Arquiteturas no Azure
+
+### Criando um Grupo de Recursos
+1. Criar um **Grupo de Recursos** para melhor organização.
+2. Definir **assinatura, região e nome** para o grupo.
+3. Adicionar **marcações (tags)** para facilitar identificação e controle de custos.
+4. Revisar e criar o grupo de recursos.
+
+### Gerenciamento e Segurança
+- O **Log de Atividade** exibe alterações nos recursos (criação, modificação, exclusão).
+- O **IAM (Controle de Acesso)** define permissões para usuários. É recomendável seguir o princípio de **menor privilégio**.
+- Existem áreas dedicadas a **implantação, segurança, monitoramento e custos**.
+
+### Criando uma VNet
+É possível criar uma **rede virtual (VNet)** e direcionar um IP para um grupo de recursos específico.
+Isso facilita a comunicação entre diferentes serviços dentro do Azure.
 
